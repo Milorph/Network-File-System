@@ -1,27 +1,35 @@
+# About
+
 This repository contains an implementation of a client-server network file system designed on top of a virtual disk that uses an indexed block allocation approach. The virtual disk architecture consists of a Superblock, Free block bitmap, Inodes (for files and directories), and Datablocks. The communication between the client and server is persistent and relies on a reliable TCP connection.
 
-##Features
+## Features
 The file system utilizes an indexed block allocation methodology.
 The virtual disk architecture incorporates a Superblock, Free block bitmap, Inodes for files and directories, and Datablocks.
 Communication between the client and server is persistent and uses a reliable TCP connection.
 The system supports file and directory creation, deletion, renaming, and modification.
 Multiple clients can access the same file system concurrently, and changes are synchronized across all connected clients.
 
-//// Each team member's name and contributions ////////////
+
 Team member #1: *Robert Widjaja*
+<br />
 Contributions:
+<br />
 Worked on mainly the FileSys , Debugged and tested all files
 
 Team member #2: *Carmel Laurentia*
+<br />
 Contributions:
+<br />
 Worked on mainly the Shell, Debugged and Tested all files
 
 Team member #3: *Alexander Chen*
+<br />
 Contributions:
+<br />
 Worked on mainly the Server, Debugged and tested all files
 
 
-##Commands Available
+## Commands Available
 - `ls`: List the contents of the current directory
 - `cd <directory>`: Change to a specified directory
 - `home`: Switch to the home (root) directory (similar to `cd /` in Unix)
