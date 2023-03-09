@@ -1,31 +1,41 @@
+This repository contains an implementation of a client-server network file system designed on top of a virtual disk that uses an indexed block allocation approach. The virtual disk architecture consists of a Superblock, Free block bitmap, Inodes (for files and directories), and Datablocks. The communication between the client and server is persistent and relies on a reliable TCP connection.
+
+##Features
+The file system utilizes an indexed block allocation methodology.
+The virtual disk architecture incorporates a Superblock, Free block bitmap, Inodes for files and directories, and Datablocks.
+Communication between the client and server is persistent and uses a reliable TCP connection.
+The system supports file and directory creation, deletion, renaming, and modification.
+Multiple clients can access the same file system concurrently, and changes are synchronized across all connected clients.
+
 //// Each team member's name and contributions ////////////
-Team member #1: Robert Widjaja
+Team member #1: *Robert Widjaja*
 Contributions:
 Worked on mainly the FileSys , Debugged and tested all files
 
-Team member #2: Carmel Laurentia
+Team member #2: *Carmel Laurentia*
 Contributions:
 Worked on mainly the Shell, Debugged and Tested all files
 
-Team member #3: Alexander Chen
+Team member #3: *Alexander Chen*
 Contributions:
 Worked on mainly the Server, Debugged and tested all files
 
 
+##Commands Available
+- `ls`: List the contents of the current directory
+- `cd <directory>`: Change to a specified directory
+- `home`: Switch to the home (root) directory (similar to `cd /` in Unix)
+- `rmdir <directory>`: Remove a directory. The directory must be empty
+- `create <filename>`: Create an empty file
+- `append <filename> <data>`: Append data to an existing file
+- `stat <name>`: Display information for a given file or directory
+- `cat <filename>`: Display the contents of a file
+- `head <filename> <n>`: Display the first `n` bytes of the file
+- `rm <filename>`: Remove a file
 
-//// My own rating on the functionality ///////////////////
-Rating: A, B, C, D, or F?
-    A-
-Explanation: 
-
-Test cases provided in the pdf worked successfully. Messages that are meant to appear in the client side aren't showed in the server.
-cd do not work on some ports but were able to successfully work on most ports. Functionality of each function works as intended
-and displayed nicely to the client.
 
 
-
-//// Test cases ///////////////////////////////////////////
-[claurentia@cs1 hw]$ ./nfsclient localhost:10480
+##Some Test Cases
 NFS> ls
   empty folder
 NFS> mkdir dir1
