@@ -44,108 +44,82 @@ Worked on mainly the Server, Debugged and tested all files
 
 ## Some Test Cases
 
-NFS> ls
-<br />
-  empty folder
-  <br />
-NFS> mkdir dir1
-<br />
-  success
-  <br />
-NFS> mkdir dir2
-<br />
-  success
-  <br />
-NFS> ls
-<br />
-  dir1 dir2 
-  <br />
-NFS> cd dir1
-<br />
-  success
-  <br />
-NFS> create file1
-<br />
-  success
-  <br />
-NFS> append file1 helloworld!
-<br />
-  success
-  <br />
-NFS> stat file1
-<br />
-  Inode block:     4
-  <br />
-Bytes in file:     11
-<br />
-Number of blocks:     2
-<br />
-First block:     5
-<br />
-NFS> ls
-<br />
-  file1 
-  <br />
-NFS> cat file1
-<br />
-  helloworld!
-  <br />
-NFS> head file1 5
-<br />
-  hello
-  <br />
-NFS> rm file2
-<br />
-  503 File does not exist
-  <br />
-NFS> cat file2
-<br />
-  503 File does not exist
-  <br />
-NFS> create file1
-<br />
-  502 File exists
-  <br />
-NFS> create file2
-<br />
-  success
-  <br />
-NFS> rm file1
-<br />
-  success
-  <br />
-NFS> ls
-<br />
-  file2 
-  <br />
-NFS> home
-<br />
-  success
-  <br />
-NFS> ls
-<br />
-  dir1 dir2 
-  <br />
-NFS> stat dir1
-<br />
-  Directory name:     dir1
-  <br />
-Directory block:     2
-<br />
-NFS> rmdir dir3
-<br />
-  503 File does not exist
-  <br />
-NFS> rmdir dir1
-<br />
-  507 Directory is not empty
-  <br />
-NFS> rmdir dir2
-<br />
-  success
-  <br />
-NFS> ls
-<br />
-  dir1 
-  <br />
-NFS> quit
+### NFS> ls
+- empty folder
+
+### NFS> mkdir dir1
+- success
+
+### NFS> mkdir dir2
+- success
+
+### NFS> ls
+- dir1
+- dir2
+
+### NFS> cd dir1
+- success
+
+### NFS> create file1
+- success
+
+### NFS> append file1 helloworld!
+- success
+
+### NFS> stat file1
+- Inode block: 4
+- Bytes in file: 11
+- Number of blocks: 2
+- First block: 5
+
+### NFS> ls
+- file1
+
+### NFS> cat file1
+- helloworld!
+
+### NFS> head file1 5
+- hello
+
+### NFS> rm file2
+- 503 File does not exist
+
+### NFS> cat file2
+- 503 File does not exist
+
+### NFS> create file1
+- 502 File exists
+
+### NFS> create file2
+- success
+
+### NFS> rm file1
+- success
+
+### NFS> ls
+- file2
+
+### NFS> home
+- success
+
+### NFS> ls
+- dir1
+
+### NFS> stat dir1
+- Directory name: dir1
+- Directory block: 2
+
+### NFS> rmdir dir3
+- 503 File does not exist
+
+### NFS> rmdir dir1
+- 507 Directory is not empty
+
+### NFS> rmdir dir2
+- success
+
+### NFS> ls
+- dir1
+
+### NFS> quit
+
