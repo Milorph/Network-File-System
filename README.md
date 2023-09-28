@@ -42,8 +42,8 @@ Worked on mainly the Server, Debugged and tested all files
 - `rm <filename>`: Remove a file
 
 
+## Some Test Cases
 
-##Some Test Cases
 NFS> ls
   empty folder
 NFS> mkdir dir1
